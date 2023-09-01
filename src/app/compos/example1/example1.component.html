@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="title"><strong>Example 1: </strong>Using Signals to update a total price</div><br>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of items">
+            {{item.name}} - ${{item.price}}
+            <button class="btn btn-success btn-sm float-end" (click)="removeItem(item)">Remove</button>
+        </li>
+    </ul>
+
+    <h5 class="text-center mt-4">Total Price:<strong> ${{totalPrice()}}</strong></h5>
+</div>

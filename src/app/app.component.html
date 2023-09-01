@@ -1,12 +1,15 @@
-<div class="container mt-3">
+<ul class="main-nav">
+    <li routerLink="compo1"><a routerLinkActive="active">Normal-Property</a></li>
+    <li routerLink="compo2"><a routerLinkActive="active">Set & Computed</a></li>
+    <li routerLink="compo3"><a routerLinkActive="active">Updated</a></li>
+    <li routerLink="compo4"><a routerLinkActive="active">Mutate & Effect</a></li>
+    <li routerLink="example1"><a routerLinkActive="active">Example-1</a></li>
+    <li routerLink="example2"><a routerLinkActive="active">Example-2</a></li>
+    <li routerLink="example3"><a routerLinkActive="active">Example-3</a></li>
+    <li routerLink="example4"><a routerLinkActive="active">Example-4</a></li>
+    <li routerLink="example5"><a routerLinkActive="active">Example-5</a></li>
+</ul>
+
+<section class="router-outlet-body">
     <router-outlet></router-outlet>
-    <div class="wrapper">
-        <app-compo1></app-compo1>
-        <br>
-        <app-compo2></app-compo2>
-        <br>
-        <app-compo3></app-compo3>
-        <br>
-        <app-compo4></app-compo4>
-    </div>
-</div>
+</section>

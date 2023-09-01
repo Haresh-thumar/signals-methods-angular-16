@@ -1,3 +1,32 @@
-.wrapper {
+.main-nav {
+    display: flex;
+    background: #4527A0;
+    margin: 0;
+}
+
+.main-nav li {
+    list-style: none;
+    margin-right: 0px;
+    padding: 15px;
+}
+
+.main-nav li:hover,
+.main-nav li:hover a {
+    background: #ffae00;
+    cursor: pointer;
+    color: #4527A0;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.router-outlet-body {
+    margin: 40px;
     padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(228, 228, 228);
 }

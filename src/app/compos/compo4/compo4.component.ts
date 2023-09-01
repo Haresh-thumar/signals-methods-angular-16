@@ -19,7 +19,7 @@ export class Compo4Component {
 
   employeeForm!: FormGroup;
 
-  employees = signal([
+  employees = signal<AryData[]>([
     { name: 'John Smith', position: 'Manager', department: 'sales' },
     { name: 'Jane Doe', position: 'Engineer', department: 'Engineering' },
     { name: 'Bob Johnson', position: 'Marketing Specialist', department: 'Marketing' },
@@ -71,4 +71,18 @@ export class Compo4Component {
     console.log('Call Api with product Data: ' + JSON.stringify(product));
   }
 
+
+
+  // employeesdd = signal<number[]>([1, 2, 3]);
+  // employeesdngf = signal<string[]>(['aaa', 'bbb', 'ccc', 'ddd']);
+  // employeesdf = signal<any>({ name: 'haresh', age: 15, eligible: false });
+}
+
+
+
+
+export class AryData {
+  name!: string;
+  position!: string;
+  department!: string;
 }
