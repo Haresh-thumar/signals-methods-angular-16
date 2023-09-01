@@ -1,0 +1,42 @@
+<!--------------------------------------------------------------------------------------------------------------------------------
+                                                        Signals (Set & Computed)
+--------------------------------------------------------------------------------------------------------------------------------->
+<div class="alert alert-secondary border-0">
+    <h5 class="fw-bold">* Set & Computed</h5>
+    <hr>
+    <p class="mb-0"><strong>- Set :</strong> Directly set the signal to a <mark> <strong>New Value</strong></mark>, and notify any dependents.</p>
+    <p class="mb-0"><strong>- Computed :</strong> Calculatd signal value according to its <strong>dependency</strong>, and notify any dependents.</p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Full Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{firstName2()}}</td>
+            <td>{{lastName2()}}</td>
+            <td>{{fullName2()}}</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="input-group my-2">
+                    <input type="text" class="form-control" placeholder="Enter First Name..." #fname2 [value]="firstName2()">
+                    <button class="btn btn-outline-primary" type="button" (click)="changeFsName(fname2.value)">Change First Name</button>
+                </div>
+            </td>
+            <td>
+                <div class="input-group my-2">
+                    <input type="text" class="form-control" placeholder="Enter Last Name..." #lname2 [value]="lastName2()">
+                    <button class="btn btn-outline-primary" type="button" (click)="changeLsName(lname2.value)">Change Last Name</button>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<br><br>

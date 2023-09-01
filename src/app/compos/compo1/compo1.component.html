@@ -1,0 +1,39 @@
+<!--------------------------------------------------------------------------------------------------------------------------------
+                                                            Normal Property
+--------------------------------------------------------------------------------------------------------------------------------->
+<div class="alert alert-secondary border-0">
+    <h5 class="fw-bold">* Normal Property</h5>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Full Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{firstName1}}</td>
+            <td>{{lastName1}}</td>
+            <td>{{fullName1}}</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="input-group my-2">
+                    <input type="text" class="form-control" placeholder="Enter First Name..." #fname1 [value]="firstName1">
+                    <button class="btn btn-outline-primary" type="button" (click)="changeFirstName(fname1.value)">Change First Name</button>
+                </div>
+            </td>
+            <td>
+                <div class="input-group my-2">
+                    <input type="text" class="form-control" placeholder="Enter Last Name..." #lname1 [value]="lastName1">
+                    <button class="btn btn-outline-primary" type="button" (click)="changeLastName(lname1.value)">Change Last Name</button>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<br><br>

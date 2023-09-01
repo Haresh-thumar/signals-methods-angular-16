@@ -1,0 +1,100 @@
+<!--------------------------------------------------------------------------------------------------------------------------------
+                                                        Signals (Mutate)
+--------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------
+                   Modify Array Elements
+--------------------------------------------------------->
+<div class="alert alert-secondary border-0 ">
+    <h5 class="fw-bold">* Mutate</h5>
+    <hr>
+    <p class="mb-0"><b>- </b>Modifies the content of signal valus. Use it with Array to modify <strong>Array Elements</strong>, and objects to modify <strong>Object Properties</strong>.</p>
+</div>
+<br>
+<figure>
+    <figcaption class="blockquote-footer text-primary">
+        Modify <mark>Array Element</mark>
+    </figcaption>
+</figure>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees(); index as i">
+            <td>{{ i+1 }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.position }}</td>
+            <td>{{ employee.department }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-primary" *ngIf="!empAdding()" (click)="toggleAddBlock()">
+    + Add Employee
+</button>
+
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div class="row border rounded py-3 mx-1" *ngIf="empAdding()">
+        <div class="col">
+            <input type="email" class="form-control" formControlName="name" placeholder="Enter Name">
+        </div>
+        <div class="col">
+            <input type="email" class="form-control" formControlName="position" placeholder="Enter Position">
+        </div>
+        <div class="col">
+            <input type="email" class="form-control" formControlName="department" placeholder="Enter Department">
+        </div>
+        <div class="col-12">
+            <div class="row mt-3">
+                <div class="col">
+                    <button type="button" type="submit" class="btn btn-primary me-2" [disabled]="employeeForm.invalid">
+                        + Add Employee
+                    </button>
+                    <button type="button" type="button" class="btn btn-secondary" (click)="toggleAddBlock()">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<br>
+<hr>
+<br class="border border-danger">
+
+<!--------------------------------------------------------
+                 Modify Object Properties
+--------------------------------------------------------->
+<figure>
+    <figcaption class="blockquote-footer text-primary">
+        Modify <mark>Object Property</mark>
+    </figcaption>
+</figure>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Price</th>
+            <th scope="col">Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ product().name }}</td>
+            <td>{{ product().category }}</td>
+            <td>{{ product().price }}</td>
+            <td>{{ product().rating }}</td>
+        </tr>
+    </tbody>
+</table>
+<button type="button" class="btn btn-success" (click)="changeProductName()">
+    Change name to Mobile
+</button>
+<br><br><br>
